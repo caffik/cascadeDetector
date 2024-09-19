@@ -1,3 +1,5 @@
+[![Build and Test](https://github.com/caffik/cascadeDetector/actions/workflows/build_test.yml/badge.svg)](https://github.com/caffik/cascadeDetector/actions/workflows/build_test.yml)
+
 # CascadeDetector
 
 CascadeDetector is a C++ library for detecting objects in images using Haar cascades. It leverages OpenCV for image
