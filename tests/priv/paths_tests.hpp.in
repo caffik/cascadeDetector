@@ -1,0 +1,12 @@
+#ifndef PATHS_TESTS_HPP
+#define PATHS_TESTS_HPP
+
+const char* const kTestFilesDir{"${TEST_FILES_DIR}"};
+const char* const kDirOutput{"${TEST_FILES_DIR}/output"};
+const char* const kDirPath{"${TEST_FILES_DIR}/dir"};
+const char* const kDirEmptyPath{"${TEST_FILES_DIR}/dir_empty"};
+const char* const kImagesPath{"${TEST_FILES_DIR}/images"};
+const char* const kHaarCascadeXML{
+    "${TEST_FILES_DIR}/haarcascade/haarcascade_frontalcatface_extended.xml"};
+
+#endif

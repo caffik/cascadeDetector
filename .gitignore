@@ -1,0 +1,6 @@
+cmake-build-debug
+examples/dataSet
+examples/haarcascades
+examples/output
+tests/test_files/output
+.idea

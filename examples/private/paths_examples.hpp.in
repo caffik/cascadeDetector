@@ -1,0 +1,12 @@
+#ifndef PATHS_TESTS_HPP
+#define PATHS_TESTS_HPP
+
+const char* const kExamplesDir{"${EXAMPLES_DIR}"};
+const char* const kDataSetDir{"${DATA_SET_DIR}"};
+const char* const kDataSetCatImagesDir{"${DATA_SET_DIR}/PetImages/Cat"};
+const char* const kDataSetDogImagesDir{"${DATA_SET_DIR}/PetImages/Dog"};
+const char* const kHaarCatsFileDir{"${HAAR_DIR}/${HAAR_CATS_FILE_NAME}"};
+const char* const kHaarDogsFileDir{"${HAAR_DIR}/${HAAR_DOGS_FILE_NAME}"};
+
+
+#endif
