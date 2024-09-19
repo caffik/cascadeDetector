@@ -3,7 +3,7 @@
 
 #include <filesystem>
 #include <libutils/type_traits.hpp>
-#include <opencv2/opencv.hpp>
+#include <opencv2/objdetect.hpp>
 #include <vector>
 
 #include "detector.functions.hpp"

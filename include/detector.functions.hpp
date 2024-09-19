@@ -2,7 +2,10 @@
 #define DETECTOR_FUNCTIONS_H
 
 #include <algorithm>
-#include <opencv2/opencv.hpp>
+#include <opencv2/core.hpp>
+#include <opencv2/imgcodecs.hpp>
+#include <opencv2/imgproc.hpp>
+
 #include <vector>
 
 #include "BS_thread_pool.hpp"

@@ -68,8 +68,10 @@ set(INCLUDE
 add_library(detector SHARED ${SCR} ${INCLUDE})
 add_library(det::Detector ALIAS detector)
 
+# "${OpenCV_LIBS}"
+
 target_link_libraries(detector
-    PUBLIC BS_thread_pool "${OpenCV_LIBS}"
+    PUBLIC BS_thread_pool opencv_core opencv_imgcodecs opencv_imgproc opencv_objdetect
     PUBLIC libutils::main
 )
 

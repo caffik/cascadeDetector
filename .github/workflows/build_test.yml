@@ -1,28 +1,32 @@
 name: Build and Test
 
-on: [push]
+on: [ push ]
 jobs:
   linux:
-    runs-on:
-      - ubuntu-latest
-  timeout-minutes: 60
-  steps:
-    - uses: actions/checkout@v4
-    - name: Install Ninja
-      run: sudo apt-get install ninja-build
-    - uses: Dovyski/setup-opencv-action@v1.1
-      with:
-        opencv-version: 4.0.0
-        opencv-extra-modules: false
-        ENABLE_PRECOMPILED_HEADERS: ON
-        INSTALL_C_EXAMPLES: OFF
-        BUILD_EXAMPLES: OFF
-    - name: Configure CMake and build
-      run: |
-        mkdir build
-        cd build
-        cmake -DENABLE_TESTING=ON -G Ninja ..
-        ninja
-    - name: Run tests
-      run: ctest -V
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Ninja
+        run: |
+          sudo apt update -y
+          sudo apt upgrade -y
+          pip install cmake ninja
+      - uses: Dovyski/setup-opencv-action@v1.1
+        with:
+          opencv-version: 4.0.0
+          install-deps: false
+          opencv-extra-modules: false
+          ENABLE_PRECOMPILED_HEADERS: ON
+          INSTALL_C_EXAMPLES: OFF
+          BUILD_EXAMPLES: OFF
+      - name: Configure CMake and build
+        run: |
+          mkdir build
+          cd build
+          cmake -DENABLE_TESTING=ON -G Ninja ..
+          ninja
+      - name: Run tests
+        run: ctest -V
 
+#  sudo apt install -y ninja-build
